@@ -31,6 +31,7 @@ RUN apt-get update -q && \
         php7.2-mysql \
 		php7.2-ldap \
 		php7.2-bcmath \
+		php7.2-socket \
         supervisor && \
 
     mkdir /run/php && \
