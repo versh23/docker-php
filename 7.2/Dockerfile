@@ -44,7 +44,7 @@ RUN apt-get update -q && \
     echo "deb https://dl.yarnpkg.com/debian/ stable main" | tee /etc/apt/sources.list.d/yarn.list && \
     apt-get update -q && apt-get install --no-install-recommends -qy yarn && \
 
-    apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
+    rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
 COPY php.ini /etc/php/7.2/cli/conf.d/50-setting.ini
 COPY php.ini /etc/php/7.2/fpm/conf.d/50-setting.ini

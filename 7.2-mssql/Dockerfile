@@ -10,7 +10,7 @@ RUN apt-get update && ACCEPT_EULA=Y apt-get install -y msodbcsql mssql-tools php
     echo 'export PATH="$PATH:/opt/mssql-tools/bin"' >> ~/.bashrc && \
     /bin/bash -c "source ~/.bashrc" && \
     pecl install pdo_sqlsrv && \
-	apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
+	rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
 COPY php.ini /etc/php/7.2/cli/conf.d/50-mssql.ini
 COPY php.ini /etc/php/7.2/fpm/conf.d/50-mssql.ini
