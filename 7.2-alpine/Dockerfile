@@ -33,7 +33,8 @@ RUN set -xe \
     php7-iconv@php \
     nodejs \
     yarn \
-    openssh-client
+    openssh-client \
+    rsync
 
 RUN set -x \
     && ln -s /usr/bin/php7 /usr/bin/php \
