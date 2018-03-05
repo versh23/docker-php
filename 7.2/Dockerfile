@@ -7,9 +7,6 @@ ENV  LANG="en_US.UTF-8" \
      DEBIAN_FRONTEND="noninteractive" \
      COMPOSER_ALLOW_SUPERUSER=1
 
-EXPOSE 80
-WORKDIR /app
-
 RUN apt-get update -q && \
     apt-get install -qy software-properties-common language-pack-en-base && \
     export LC_ALL=en_US.UTF-8 && \
@@ -53,5 +50,9 @@ COPY php.ini /etc/php/7.2/fpm/conf.d/50-setting.ini
 COPY pool.conf /etc/php/7.2/fpm/pool.d/www.conf
 COPY nginx.conf /etc/nginx/nginx.conf
 COPY supervisord.conf /etc/supervisor/conf.d/supervisord.conf
+
+EXPOSE 80
+WORKDIR /app
+
 
 CMD ["supervisord", "-c", "/etc/supervisor/conf.d/supervisord.conf"]

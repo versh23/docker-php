@@ -40,4 +40,7 @@ COPY pool.conf /etc/php/7/php-fpm.d/www.conf
 COPY nginx.conf /etc/nginx/nginx.conf
 COPY supervisord.conf /etc/supervisord.conf
 
+EXPOSE 80
+WORKDIR /app
+
 CMD ["supervisord", "-c", "/etc/supervisord.conf"]
