@@ -29,6 +29,7 @@ RUN apt-get update -q && \
         php7.2-zip \
         php7.2-xml \
         php7.2-mysql \
+		php7.2-ldap \
         supervisor && \
 
     mkdir /run/php && \
