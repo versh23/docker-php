@@ -33,6 +33,7 @@ RUN apt-get update -q && \
 	php7.2-bcmath \
 	php7.2-socket \
 	php7.2-iconv \
+	php7.2-soap \
         supervisor \
 	rsync \
 	openssh-client && \
