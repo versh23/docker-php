@@ -14,29 +14,29 @@ RUN apt-get update -q && \
     add-apt-repository ppa:ondrej/php && \
     apt-get update -q && \
     apt-get install --no-install-recommends -qy \
-        ca-certificates \
-        curl \
-        nano \
-        nginx \
-        git \
-        php7.2 \
-        php7.2-curl \
-        php7.2-fpm \
-        php7.2-gd \
-        php7.2-intl \
-        php7.2-mbstring \
-        php7.2-pdo \
-        php7.2-zip \
-        php7.2-xml \
-        php7.2-mysql \
-	php7.2-ldap \
-	php7.2-bcmath \
-	php7.2-socket \
-	php7.2-iconv \
-	php7.2-soap \
-        supervisor \
-	rsync \
-	openssh-client && \
+    ca-certificates \
+    curl \
+    nano \
+    nginx \
+    git \
+    php7.2 \
+    php7.2-curl \
+    php7.2-fpm \
+    php7.2-gd \
+    php7.2-intl \
+    php7.2-mbstring \
+    php7.2-pdo \
+    php7.2-zip \
+    php7.2-xml \
+    php7.2-mysql \
+    php7.2-ldap \
+    php7.2-bcmath \
+    php7.2-socket \
+    php7.2-iconv \
+    php7.2-soap \
+    supervisor \
+    rsync \
+    openssh-client && \
 
     mkdir /run/php && \
 
