@@ -62,4 +62,4 @@ EXPOSE 80
 WORKDIR /app
 
 
-CMD ["supervisord", "-c", "/etc/supervisor/conf.d/supervisord.conf"]
+CMD ["supervisord", "-c", "/etc/supervisor/supervisord.conf"]
