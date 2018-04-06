@@ -60,7 +60,6 @@ COPY nginx.conf /etc/nginx/nginx.conf
 # forward request and error logs to docker log collector
 RUN ln -sf /dev/stdout /var/log/nginx/access.log \
 	&& ln -sf /dev/stderr /var/log/nginx/error.log
-RUN rm /etc/nginx/conf.d/default.conf
 
 COPY supervisord.conf /etc/supervisor/supervisord.conf
 COPY supervisord-nginx.conf /etc/supervisor/conf.d/supervisord-nginx.conf
