@@ -55,8 +55,18 @@ RUN apt-get update -q && \
 COPY php.ini /etc/php/7.2/cli/conf.d/50-setting.ini
 COPY php.ini /etc/php/7.2/fpm/conf.d/50-setting.ini
 COPY pool.conf /etc/php/7.2/fpm/pool.d/www.conf
+
 COPY nginx.conf /etc/nginx/nginx.conf
-COPY supervisord.conf /etc/supervisor/conf.d/supervisord.conf
+# forward request and error logs to docker log collector
+RUN ln -sf /dev/stdout /var/log/nginx/access.log \
+	&& ln -sf /dev/stderr /var/log/nginx/error.log
+RUN rm /etc/nginx/conf.d/default.conf
+
+COPY supervisord.conf /etc/supervisor/supervisord.conf
+COPY supervisord-nginx.conf /etc/supervisor/conf.d/supervisord-nginx.conf
+COPY supervisord-php.conf /etc/supervisor/conf.d/supervisord-php.conf
+
+
 
 EXPOSE 80
 WORKDIR /app
