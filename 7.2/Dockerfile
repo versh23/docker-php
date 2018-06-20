@@ -36,6 +36,7 @@ RUN apt-get update -q && \
     php7.2-soap \
     supervisor \
     rsync \
+    bzip2 \
     openssh-client && \
 
     mkdir /run/php && \
