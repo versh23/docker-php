@@ -56,7 +56,7 @@ RUN apt-get update -q && \
 
 COPY php.ini /etc/php/7.1/cli/conf.d/50-setting.ini
 COPY php.ini /etc/php/7.1/fpm/conf.d/50-setting.ini
-COPY xdebug.ini /etc/php/7.1/fpm/conf.d/20-xdebug.ini
+COPY xdebug.ini /etc/php/7.1/fpm/conf.d/50-xdebug.ini
 COPY pool.conf /etc/php/7.1/fpm/pool.d/www.conf
 
 COPY nginx.conf /etc/nginx/nginx.conf
