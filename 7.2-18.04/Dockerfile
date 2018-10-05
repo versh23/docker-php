@@ -32,7 +32,8 @@ RUN apt-get install --no-install-recommends -qy \
     php-iconv \
     php-soap \
     supervisor \
-    bzip2
+    bzip2 \
+    unzip
 
 RUN cp /usr/share/zoneinfo/Europe/Moscow /etc/localtime && echo "Europe/Moscow" > /etc/timezone && \
 
