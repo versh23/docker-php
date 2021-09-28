@@ -37,7 +37,7 @@ RUN apt-get install --no-install-recommends -qy \
 
 RUN cp /usr/share/zoneinfo/Europe/Moscow /etc/localtime && echo "Europe/Moscow" > /etc/timezone && \
 
-    curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer --version=1.9.0 && \
+    curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer --version=2.1.3 && \
 
     curl -sL https://deb.nodesource.com/setup_12.x | bash && apt-get install -y nodejs && \
 
