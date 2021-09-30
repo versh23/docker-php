@@ -33,7 +33,9 @@ RUN apt-get install --no-install-recommends -qy \
     php-soap \
     supervisor \
     bzip2 \
-    unzip
+    unzip \
+    openssh-client \
+    rsync
 
 RUN cp /usr/share/zoneinfo/Europe/Moscow /etc/localtime && echo "Europe/Moscow" > /etc/timezone && \
 
